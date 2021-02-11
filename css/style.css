@@ -1,0 +1,106 @@
+:root {
+  --dark-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+  --dark-grey-blue: hsl(237, 12%, 33%);
+  --grey-blue: hsl(240, 6%, 50%);
+  --light-grey-blue: hsl(240, 5%, 91%);
+  --regular: 400;
+  --bold: 400;
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+  --mobile: 23.4375em; }
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 75%; }
+
+body {
+  height: 100vh;
+  background: linear-gradient(to top, var(--soft-blue), var(--soft-violet));
+  font-family: "Kumbh Sans", sans-serif;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.content {
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .content__title {
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--dark-blue);
+    margin: 5.5rem 0 2rem 0;
+    position: static; }
+  .content__accordion {
+    font-size: 1.2rem;
+    font-weight: 400;
+    width: 75%;
+    flex: 1; }
+    .content__accordion-item {
+      padding: 1.75rem 0;
+      border-bottom: 1px solid var(--light-grey-blue); }
+      .content__accordion-item--question {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: var(--dark-grey-blue);
+        width: 100%;
+        cursor: pointer; }
+        .content__accordion-item--question p {
+          margin: 0 auto 0 0; }
+        .content__accordion-item--question p:hover {
+          color: var(--soft-red); }
+      .content__accordion-item--answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.2s; }
+
+.question-active {
+  font-weight: 800;
+  color: var(--dark-grey-blue); }
+
+.answer-active {
+  overflow: visible;
+  max-height: 20rem;
+  color: var(--grey-blue);
+  line-height: 1.75rem;
+  margin-top: 1.5rem;
+  transition: all 0.2s; }
+
+.image-container {
+  flex: 0 0 50%;
+  position: relative;
+  overflow: hidden; }
+  .image-container .image__background {
+    position: absolute;
+    top: -25rem;
+    left: -49rem; }
+  .image-container .image__main {
+    position: absolute;
+    top: 5rem;
+    left: -8rem;
+    width: 40rem; }
+
+.box {
+  position: absolute;
+  top: 16rem;
+  left: -8rem;
+  z-index: 10; }
+
+.main-container {
+  background: #fff;
+  width: 76.5rem;
+  height: 42.5rem;
+  border-radius: 2rem;
+  display: flex;
+  position: relative; }
