@@ -8,7 +8,7 @@
   --bold: 400;
   --soft-violet: hsl(273, 75%, 66%);
   --soft-blue: hsl(240, 73%, 65%);
-  --mobile: 23.4375em; }
+  --mobile: 920px; }
 
 *,
 *::before,
@@ -19,6 +19,9 @@
 
 html {
   font-size: 75%; }
+  @media only screen and (max-width: 1000px) {
+    html {
+      font-size: 65%; } }
 
 body {
   height: 100vh;
@@ -27,13 +30,17 @@ body {
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  position: relative; }
 
 .content {
   flex: 0 0 50%;
   display: flex;
   flex-direction: column;
   justify-content: center; }
+  @media only screen and (max-width: 1000px) {
+    .content {
+      align-items: center; } }
   .content__title {
     font-size: 3rem;
     font-weight: 800;
@@ -41,11 +48,17 @@ body {
     color: var(--dark-blue);
     margin: 5.5rem 0 2rem 0;
     position: static; }
+    @media only screen and (max-width: 1000px) {
+      .content__title {
+        margin: 3rem 0 2rem 0; } }
   .content__accordion {
     font-size: 1.2rem;
     font-weight: 400;
     width: 75%;
     flex: 1; }
+    @media only screen and (max-width: 1000px) {
+      .content__accordion {
+        width: 90%; } }
     .content__accordion-item {
       padding: 1.75rem 0;
       border-bottom: 1px solid var(--light-grey-blue); }
@@ -81,21 +94,37 @@ body {
   flex: 0 0 50%;
   position: relative;
   overflow: hidden; }
+  @media only screen and (max-width: 1000px) {
+    .image-container {
+      flex: 0 0 20%;
+      overflow: visible; } }
   .image-container .image__background {
     position: absolute;
     top: -25rem;
     left: -49rem; }
+    @media only screen and (max-width: 1000px) {
+      .image-container .image__background {
+        top: 0;
+        left: -12rem; } }
   .image-container .image__main {
     position: absolute;
     top: 5rem;
     left: -8rem;
     width: 40rem; }
+    @media only screen and (max-width: 1000px) {
+      .image-container .image__main {
+        top: -10.5rem;
+        left: -14rem;
+        width: 25rem; } }
 
 .box {
   position: absolute;
   top: 16rem;
   left: -8rem;
   z-index: 10; }
+  @media only screen and (max-width: 1000px) {
+    .box {
+      display: none; } }
 
 .main-container {
   background: #fff;
@@ -104,3 +133,12 @@ body {
   border-radius: 2rem;
   display: flex;
   position: relative; }
+  @media only screen and (max-width: 1000px) {
+    .main-container {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      width: 90%;
+      height: 70%;
+      position: absolute;
+      bottom: 5.5rem; } }

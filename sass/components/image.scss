@@ -1,16 +1,23 @@
 .image-container {
-  //   border: 1px solid orangered;
   flex: 0 0 50%;
   position: relative;
   overflow: hidden;
 
+  @media only screen and (max-width: 1000px) {
+    flex: 0 0 20%;
+    overflow: visible;
+  }
+
   .image {
     &__background {
       position: absolute;
-      // width: 100%;
-      // height: 100%;
       top: -25rem;
       left: -49rem;
+
+      @media only screen and (max-width: 1000px) {
+        top: 0;
+        left: -12rem;
+      }
     }
 
     &__main {
@@ -18,7 +25,12 @@
       top: 5rem;
       left: -8rem;
       width: 40rem;
-      // height: 100%;
+
+      @media only screen and (max-width: 1000px) {
+        top: -10.5rem;
+        left: -14rem;
+        width: 25rem;
+      }
     }
   }
 }
@@ -28,4 +40,8 @@
   top: 16rem;
   left: -8rem;
   z-index: 10;
+
+  @media only screen and (max-width: 1000px) {
+    display: none;
+  }
 }

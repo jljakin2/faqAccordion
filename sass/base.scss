@@ -15,7 +15,7 @@
   --soft-blue: hsl(240, 73%, 65%);
 
   // responsive widths
-  --mobile: 23.4375em;
+  --mobile: 920px;
 }
 
 *,
@@ -28,6 +28,10 @@
 
 html {
   font-size: 75%;
+
+  @media only screen and (max-width: 1000px) {
+    font-size: 65%;
+  }
 }
 
 body {
@@ -38,4 +42,5 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
